@@ -125,7 +125,7 @@ def load_yaml(filename):
         yaml.SafeLoader.add_constructor(u'!radians', construct_angle_radians)
         yaml.SafeLoader.add_constructor(u'!degrees', construct_angle_degrees)
     except Exception:
-        raise XacroException("yaml support not available; install python-yaml")
+        raise XacroException("yaml support not available; install python3-yaml")
 
     filename = abs_filename_spec(filename)
     f = open(filename)
